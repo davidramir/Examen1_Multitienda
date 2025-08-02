@@ -16,9 +16,11 @@ return new class extends Migration
             $table->string('nombre',80);
             $table->decimal('precio',10,2);
             $table->timestamps();
-
+            
+            // Añade la columna de clave foránea para 'marca_id'
             $table->unsignedBigInteger('marca_id')->nullable();
 
+            // Define la clave foránea
             $table->foreign('marca_id')->references('id')->on('marcas')->onDelete('set null');
         });
     }
