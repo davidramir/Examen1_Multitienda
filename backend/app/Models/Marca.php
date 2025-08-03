@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Marcas extends Model
+class Marca extends Model
 {
     //
-    protected $table = 'marca';
-    
+    protected $table = 'marcas';
+
     protected $fillable = ['nombre'];
 }
